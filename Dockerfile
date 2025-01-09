@@ -14,7 +14,7 @@ WORKDIR /home/tresorit
 USER tresorit
 
 # install tresorit
-RUN curl -o tresorit_installer.run https://installerstorage.blob.core.windows.net/public/install/tresorit_installer.run && \
+RUN curl -o ./tresorit_installer.run https://installer.tresorit.com/tresorit_installer.run && \
     chmod +x ./tresorit_installer.run && \
     echo "N " | ./tresorit_installer.run --update-v2 . && \
     rm ./tresorit_installer.run && \
